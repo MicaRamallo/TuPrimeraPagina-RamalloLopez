@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<form action='/web/malla_formulario/' method="POST">
+    {% csrf_token %}
+    <table>
+        {{formulario.as_table}}
+    </table>
+</form>
+
+{% endblock %}
